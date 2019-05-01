@@ -5,23 +5,17 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MainpanelComponent } from './components/mainpanel/mainpanel.component';
 import { ProjectsService } from "./services/projects/projects.service";
-import { HttpClientModule } from "@angular/common/http";
-import { SharedData } from "./common/shared-data";
-import { ProjectitemComponent } from './components/sidebar/projectitem/projectitem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    MainpanelComponent,
-    ProjectitemComponent
+    MainpanelComponent
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule
+    BrowserModule
   ],
   providers: [
-    SharedData,
     {
         provide: APP_INITIALIZER,
         useFactory: startupServiceFactory,
@@ -34,5 +28,5 @@ import { ProjectitemComponent } from './components/sidebar/projectitem/projectit
 export class AppModule { }
 
 export function startupServiceFactory(startupService: ProjectsService) {
-   return () => startupService.load();
-}
+    return () => startupService.load();
+  }
