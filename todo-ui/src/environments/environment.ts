@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  serverUri: 'https://27487e3b-7514-4452-a27c-b34bf842db8b.mock.pstmn.io'
+  // serverUri: 'https://27487e3b-7514-4452-a27c-b34bf842db8b.mock.pstmn.io'
+	serverUri: 'https://b304f3a5-7d31-4e50-8cdb-ae90102162bc.mock.pstmn.io'
 };
 
 /*
