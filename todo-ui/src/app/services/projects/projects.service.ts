@@ -13,7 +13,7 @@ export class ProjectsService {
   constructor(private http: HttpClient, private sharedData: SharedData) { }
   
   getAllProjects(): Observable<ProjectList> {
-      return this.http.get<ProjectList>(environment.serverUri);
+      return this.http.get<ProjectList>(environment.serverUri + "/projects");
   }
   
   load(): Promise<any> {
