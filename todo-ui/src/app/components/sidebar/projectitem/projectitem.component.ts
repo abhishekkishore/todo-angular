@@ -24,4 +24,8 @@ export class ProjectitemComponent {
       this.active = false;
       this.cursor = "auto";
   }
+
+  private onclick(event: MouseEvent) {
+	alert('click');
+  }
 }

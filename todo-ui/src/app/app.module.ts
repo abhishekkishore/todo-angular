@@ -8,13 +8,15 @@ import { ProjectsService } from "./services/projects/projects.service";
 import { HttpClientModule } from "@angular/common/http";
 import { SharedData } from "./common/shared-data";
 import { ProjectitemComponent } from './components/sidebar/projectitem/projectitem.component';
+import { TaskitemComponent } from './components/mainpanel/taskitem/taskitem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     MainpanelComponent,
-    ProjectitemComponent
+    ProjectitemComponent,
+    TaskitemComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mainpanel.component.css']
 })
 export class MainpanelComponent implements OnInit {
+	
+  private tasks
 
   constructor() { }
 
