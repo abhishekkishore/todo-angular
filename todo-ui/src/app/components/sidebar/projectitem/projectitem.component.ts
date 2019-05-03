@@ -1,18 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectList } from "../../../models/project-list";
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-projectitem',
   templateUrl: './projectitem.component.html',
   styleUrls: ['./projectitem.component.css']
 })
-export class ProjectitemComponent implements OnInit {
-    
-  private projects: ProjectList;
+export class ProjectitemComponent {
+
+  private active = false;
+  private cursor = "auto";
+  
+  @Input() tasksLength: string;
+  @Input() name: string;
 
   constructor() { }
-
-  ngOnInit() {
+  
+  private mouseenter(event: MouseEvent) {
+      this.active = true;
+      this.cursor = "pointer";
   }
-
+  
+  private mouseleave(event: MouseEvent) {
+      this.active = false;
+      this.cursor = "auto";
+  }
 }

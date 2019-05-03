@@ -10,11 +10,9 @@ import { ProjectList } from "../../models/project-list";
 export class SidebarComponent implements OnInit {
     
   private projects: ProjectList;
-
   constructor(private sharedData: SharedData) { }
-
+  
   ngOnInit() {
       this.projects = this.sharedData.getProjects();
   }
-
 }

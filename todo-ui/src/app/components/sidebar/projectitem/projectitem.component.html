@@ -1,1 +1,1 @@
-<li class="list-group-item list-group-item-light pt-1 pb-1 pl-1 pr-1" (mouseover)=projectHover($event) *ngFor="let row of projects.members">{{row.name}}<span class="badge badge-pill badge-primary">{{row.tasks.length}}</span></li>
+<li class="list-group-item list-group-item-light pt-1 pb-1 pl-1 pr-1" [class.active]="active" [style.cursor]="cursor" (mouseenter)=mouseenter($event) (mouseleave)=mouseleave($event)>{{name}}<span class="badge badge-pill badge-primary">{{tasksLength}}</span></li>
