@@ -18,13 +18,12 @@ export class ProjectsService {
       return this.http.get<ProjectList>(environment.serverUri + "/projects");
   }
 
-  getTasks(project: Project): Observable<Task> {
-	  return this.http.get<Task>(environment.serverUri + "/projects" + project.id + "/tasks");
+  getTasks(projectId: string): Observable<Task[]> {
+	  return this.http.get<Task[]>(environment.serverUri + "/projects/" + projectId + "/tasks");
   }
   
   load(): Promise<any> {
       return this.getAllProjects().toPromise().then((data: ProjectList) => {
-          console.log(data);
           this.sharedData.setProjects(data);
       });
   }

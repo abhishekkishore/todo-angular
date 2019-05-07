@@ -1,5 +1,5 @@
 <div id="main" class="mainpanel">
   <ul class="list-group">
-	
+	<app-taskitem *ngFor="let task of tasks|async" [taskName]="task.name"></app-taskitem>
   </ul>
 </div>
