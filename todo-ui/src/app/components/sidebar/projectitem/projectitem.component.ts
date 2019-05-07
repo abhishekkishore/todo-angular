@@ -20,10 +20,16 @@ export class ProjectitemComponent implements OnInit{
   constructor(private messageExchange: MessageExchangeComponentService) { }
   
   ngOnInit() {
-      this.messageExchange.selectedProjectOrder.subscribe(order=>this.clearSelection(order));
+      this.messageExchange.selectedProjectOrder.subscribe(order=>this.handleSelection(order));
   }
-  
-  private clearSelection(order: string): void {
+
+  private handleSelection(order: string) {
+	this.updateSelection(order);
+	if(this.selected) {
+		this.messageExchange.updateSelectedProject(this.id);
+	}
+  }  
+  private updateSelection(order: string): void {
       if(order!=null && order !== this.order) {
           this.selected = false;
       }
@@ -34,17 +40,17 @@ export class ProjectitemComponent implements OnInit{
   
   private mouseenter(event: MouseEvent) {
       this.active = true;
-      this.cursor = "pointer";
+      
   }
   
   private mouseleave(event: MouseEvent) {
       this.active = false;
-      this.cursor = "auto";
+      
   }
 
   private onclick(event: MouseEvent) {
 	console.log('click');
-	this.messageExchange.updateSelectedProject(this.id);
+	//this.messageExchange.updateSelectedProject(this.id);
 	this.active = false;
 //	this.selected = true;
 	this.messageExchange.projectSelected(this.order);
