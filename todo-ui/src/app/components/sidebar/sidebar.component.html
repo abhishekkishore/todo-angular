@@ -1,5 +1,5 @@
 <div id="mySidebar" class="sidebar">
 	<ul class="list-group">
-	  <app-projectitem *ngFor="let row of projects.members" [tasksLength]="row.tasks.length" [name]="row.name"></app-projectitem>
+	  <app-projectitem *ngFor="let row of projects.members" [tasksLength]="row.tasks.length" [name]="row.name" [order]="row.order"></app-projectitem>
 	</ul>
 </div>
