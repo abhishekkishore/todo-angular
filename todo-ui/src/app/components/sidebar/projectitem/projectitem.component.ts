@@ -9,7 +9,6 @@ import { MessageExchangeComponentService } from "../../../services/message-excha
 export class ProjectitemComponent implements OnInit{
 
   private active = false;
-  private cursor = "auto";
   private selected = false;
   
   @Input() tasksLength: string;
