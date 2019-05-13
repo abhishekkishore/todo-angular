@@ -3,7 +3,7 @@ import { MessageExchangeComponentService } from '../../services/message-exchange
 import { ProjectsService } from '../../services/projects/projects.service';
 import { Task } from '../../models/task';
 import { Observable } from 'rxjs';
-
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-mainpanel',
@@ -11,6 +11,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./mainpanel.component.css']
 })
 export class MainpanelComponent implements OnInit {
+	
+  faPlus = faPlus;
 	
   private tasks: Observable<Task[]>;
 

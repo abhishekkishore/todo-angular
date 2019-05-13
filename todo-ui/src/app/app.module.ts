@@ -9,6 +9,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { SharedData } from "./common/shared-data";
 import { ProjectitemComponent } from './components/sidebar/projectitem/projectitem.component';
 import { TaskitemComponent } from './components/mainpanel/taskitem/taskitem.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TaskitemComponent } from './components/mainpanel/taskitem/taskitem.comp
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+	FontAwesomeModule
   ],
   providers: [
     SharedData,

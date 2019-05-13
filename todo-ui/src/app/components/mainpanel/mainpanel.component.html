@@ -1,4 +1,12 @@
 <div id="main" class="mainpanel">
+  <!--<div style="text-align:center">
+  	<fa-icon [icon]="faPlus"></fa-icon>
+  </div>-->
+<div class="inputWithIcon">
+<input type="text">
+
+  <fa-icon [icon]="faPlus"></fa-icon></div>
+
   <ul class="list-group">
 	<app-taskitem *ngFor="let task of tasks|async" [taskName]="task.name"></app-taskitem>
   </ul>
