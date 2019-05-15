@@ -1,8 +1,5 @@
 .mainpanel {
 	margin-left: 250px;
-	height: 100%; /* 100% Full-height */
-	width: 100%;
-    position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
@@ -13,38 +10,42 @@
 }
 
 input[type=text]{
-    width:100%;
-    border:2px solid #aaa;
-    border-radius:4px;
-    margin:8px 0;
-    outline:none;
-    padding:8px;
-    box-sizing:border-box;
-    transition:.3s;
-  }
+   width:100%;
+   border:2px solid #aaa;
+   border-radius:4px;
+   margin:8px 0px 0px 0px;
+   outline:none;
+   padding:8px;
+   box-sizing:border-box;
+ }
+ 
+ .inputWithIcon input[type=text]:focus{
+   border-color:dodgerBlue;
+   box-shadow:0 0 8px 0 dodgerBlue;
+   padding-left: 9px;
+ }
+ 
+ .inputWithIcon input[type=text]{
+   padding-left:40px;
+ }
+ 
+ .inputWithIcon{
+   position:relative;
+ }
   
-  input[type=text]:focus{
-    border-color:dodgerBlue;
-    box-shadow:0 0 8px 0 dodgerBlue;
-  }
-  
-  .inputWithIcon input[type=text]{
-    padding-left:40px;
-  }
-  
-  .inputWithIcon{
-    position:relative;
-  }
-  
-  .inputWithIcon fa-icon{
-    position:absolute;
-    left:0;
-    top:8px;
-    padding:9px 8px;
-    color:#aaa;
-    transition:.3s;
-  }
-  
-  .inputWithIcon input[type=text]:focus + i{
-    color:dodgerBlue;
-  }
+.inputWithIcon fa-icon{
+  position:absolute;
+  left:0;
+  top:8px;
+  padding:9px 8px;
+  color:#aaa;
+  transition:.3s;
+}
+
+.inputWithIcon button {
+	position:absolute;
+	right:0;
+  	margin-top: 14px;
+  	padding-top: 3px;
+  	padding-bottom: 3px;
+}

@@ -13,6 +13,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 export class MainpanelComponent implements OnInit {
 	
   faPlus = faPlus;
+  private showAddTaskIcon = true;
 	
   private tasks: Observable<Task[]>;
 
@@ -24,6 +25,14 @@ export class MainpanelComponent implements OnInit {
 
   private refreshTaskList(projectId: string) {
 	this.tasks = this.projectsService.getTasks(projectId);
+  }
+  
+  handleAddTaskFocus() {
+      this.showAddTaskIcon = false;
+  }
+  
+  handleAddTaskFocusOut() {
+      this.showAddTaskIcon = true;
   }
 
 }

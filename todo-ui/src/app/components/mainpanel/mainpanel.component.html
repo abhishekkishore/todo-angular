@@ -1,11 +1,13 @@
 <div id="main" class="mainpanel">
-  <!--<div style="text-align:center">
-  	<fa-icon [icon]="faPlus"></fa-icon>
-  </div>-->
-<div class="inputWithIcon">
-<input type="text">
-
-  <fa-icon [icon]="faPlus"></fa-icon></div>
+  <div class="inputWithIcon">
+    <input id="addTask" type="text" (focus)="handleAddTaskFocus()" (focusout)="handleAddTaskFocusOut()" placeholder="Add task">
+    <fa-icon [icon]="faPlus" *ngIf="showAddTaskIcon"></fa-icon>
+  	<button type="button" class="btn btn-secondary" data-toggle="collapse" data-target=".taskDetails">More...</button>
+  </div>
+  <div class="collapse taskDetails">
+  	<input id="addDescription" type="text"/>
+  	<input id="addDueDate" type="text"/>
+  </div>
 
   <ul class="list-group">
 	<app-taskitem *ngFor="let task of tasks|async" [taskName]="task.name"></app-taskitem>
