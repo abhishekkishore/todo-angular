@@ -1,5 +1,8 @@
 <div id="main" class="mainpanel">
-  <div class="inputWithIcon">
+  <ul class="list-group task-list">
+	<app-taskitem *ngFor="let task of tasks|async" [taskName]="task.name"></app-taskitem>
+  </ul>
+    <div class="inputWithIcon">
     <input id="addTask" type="text" (focus)="handleAddTaskFocus()" (focusout)="handleAddTaskFocusOut()" placeholder="Add task">
     <fa-icon [icon]="faPlus" *ngIf="showAddTaskIcon"></fa-icon>
   	<button type="button" class="btn btn-secondary" data-toggle="collapse" data-target=".taskDetails">More...</button>
@@ -8,8 +11,7 @@
   	<input id="addDescription" type="text"/>
   	<input id="addDueDate" type="text"/>
   </div>
-
-  <ul class="list-group">
-	<app-taskitem *ngFor="let task of tasks|async" [taskName]="task.name"></app-taskitem>
-  </ul>
+  <div class="inputWithIcon collapse">
+  	<button type="button" class="btn btn-secondary">Less...</button>
+  </div>
 </div>

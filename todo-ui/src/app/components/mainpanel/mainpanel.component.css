@@ -5,17 +5,22 @@
     left: 0;
     background-color: lemonchiffon;
     overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: hidden;
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+.task-list {
+	margin-bottom: 25px;
 }
 
 input[type=text]{
    width:100%;
    border:2px solid #aaa;
    border-radius:4px;
-   margin:8px 0px 0px 0px;
+   margin:0px 0px 0px 0px;
    outline:none;
-   padding:8px;
+   padding:4px 8px 4px 8px;
    box-sizing:border-box;
  }
  
@@ -36,8 +41,7 @@ input[type=text]{
 .inputWithIcon fa-icon{
   position:absolute;
   left:0;
-  top:8px;
-  padding:9px 8px;
+  padding:6px 8px 9px 8px;
   color:#aaa;
   transition:.3s;
 }
@@ -45,7 +49,7 @@ input[type=text]{
 .inputWithIcon button {
 	position:absolute;
 	right:0;
-  	margin-top: 14px;
-  	padding-top: 3px;
-  	padding-bottom: 3px;
+  	margin-top: 5px;
+  	padding-top: 0px;
+  	padding-bottom: 0px;
 }
